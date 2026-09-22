@@ -12,18 +12,19 @@ export default function Footer() {
             <Link href="/" className="footer-brand">{site.name}</Link>
             <p className="footer-desc">
               Wedding Planner y Event Designer en Barcelona y alrededores.
-              Bodas con identidad propia, desde la primera idea hasta el ultimo detalle.
+              Bodas con identidad propia, desde la primera idea hasta el último detalle.
             </p>
           </div>
 
           <div>
-            <p className="footer-col-label">Navegacion</p>
+            <p className="footer-col-label">Navegación</p>
             <ul className="footer-nav">
               {navLinks.map(l => (
                 <li key={l.href}>
                   <Link href={l.href}>{l.label}</Link>
                 </li>
               ))}
+              <li><Link href="/contacto">Contacto</Link></li>
             </ul>
           </div>
 

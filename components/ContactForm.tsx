@@ -92,7 +92,7 @@ export default function ContactForm() {
       </div>
 
       <div className="form-field">
-        <label className="form-label" htmlFor="phone">Telefono (opcional)</label>
+        <label className="form-label" htmlFor="phone">Teléfono (opcional)</label>
         <input
           id="phone" className="form-input" type="tel"
           placeholder="+34 600 000 000"
@@ -101,10 +101,10 @@ export default function ContactForm() {
       </div>
 
       <div className="form-field">
-        <label className="form-label" htmlFor="message">Cuentame vuestra boda</label>
+        <label className="form-label" htmlFor="message">Cuéntame vuestra boda</label>
         <textarea
           id="message" className="form-textarea" rows={4}
-          placeholder="Donde os imagináis, que buscáis, que os importa..."
+          placeholder="Donde os imagináis, qué buscáis, qué os importa..."
           value={form.message} onChange={e => update('message', e.target.value)}
         />
       </div>

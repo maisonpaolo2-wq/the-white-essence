@@ -21,7 +21,7 @@ export default function PortfolioPage() {
             Momentos que<br />permanecen
           </h1>
           <p className="page-hero-sub">
-            Cada boda es un mundo. Aqui hay una muestra de los mundos que hemos
+            Cada boda es un mundo. Aquí hay una muestra de los mundos que hemos
             construido juntos.
           </p>
         </div>
@@ -54,12 +54,12 @@ export default function PortfolioPage() {
 
       <div className="cta-band">
         <div className="wrap cta-band-inner">
-          <Reveal>
+          <Reveal style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 32 }}>
             <h2 className="headline cta-band-title">
-              ¿Imaginais vuestra boda?
+              ¿Imagináis vuestra boda?
             </h2>
             <p className="cta-band-sub">
-              Cuéntame como la veis y empezamos a construirla juntos.
+              Cuéntame cómo la veis y empezamos a construirla juntos.
             </p>
             <Link href="/contacto" className="btn btn-ghost-light">
               Hablemos

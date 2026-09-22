@@ -19,7 +19,7 @@ const values = [
   {
     num: '02',
     title: 'Presencia',
-    desc: 'El dia de vuestra boda mi único trabajo es que no tengáis que preocuparos de nada. Vosotros presentes, yo ocupándome de todo lo demás.',
+    desc: 'El día de vuestra boda mi único trabajo es que no tengáis que preocuparos de nada. Vosotros presentes, yo ocupándome de todo lo demás.',
   },
   {
     num: '03',
@@ -41,7 +41,7 @@ export default function SobreMiPage() {
           </h1>
           <p className="page-hero-sub">
             Wedding planner y event designer. Organizo bodas en Barcelona y alrededores
-            que solo podrian existir para vosotros.
+            que solo podrían existir para vosotros.
           </p>
         </div>
       </section>
@@ -64,8 +64,8 @@ export default function SobreMiPage() {
               </p>
               <p className="body-text" style={{ marginBottom: 20 }}>
                 Empecé a organizar bodas porque me daba cuenta de que muchas celebraciones
-                no reflejaban a las parejas que las protagonizaban. Habia produccion, habia
-                flores, habia comida, pero faltaba alma.
+                no reflejaban a las parejas que las protagonizaban. Había producción, había
+                flores, había comida, pero faltaba alma.
               </p>
               <p className="body-text" style={{ marginBottom: 20 }}>
                 Me especializo en la organización integral, la coordinación y en crear
@@ -75,7 +75,7 @@ export default function SobreMiPage() {
               <p className="body-text" style={{ marginBottom: 20 }}>
                 Trabajo con parejas que quieren una boda que cuente su historia. No la
                 historia de pinterest, sino la vuestra: cómo os conocisteis, qué os hace
-                reir, qué música ponéis cuando estáis en casa.
+                reír, qué música ponéis cuando estáis en casa.
               </p>
               <p className="body-text">
                 Trabajo en Barcelona y alrededores, y viajo donde la boda lo merezca.
@@ -88,9 +88,9 @@ export default function SobreMiPage() {
       <section className="section section--blush">
         <div className="wrap">
           <Reveal>
-            <p className="label" style={{ marginBottom: 16 }}>Como trabajo</p>
+            <p className="label" style={{ marginBottom: 16 }}>Cómo trabajo</p>
             <h2 className="headline" style={{ fontSize: 'clamp(36px, 5vw, 68px)' }}>
-              Lo que me guia
+              Lo que me guía
             </h2>
           </Reveal>
           <div className="values-grid">
@@ -120,7 +120,7 @@ export default function SobreMiPage() {
 
       <div className="cta-band">
         <div className="wrap cta-band-inner">
-          <Reveal>
+          <Reveal style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 32 }}>
             <h2 className="headline cta-band-title">
               ¿Conectamos?
             </h2>

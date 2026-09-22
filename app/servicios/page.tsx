@@ -59,9 +59,9 @@ export default function ServiciosPage() {
       <section className="section">
         <div className="wrap">
           <Reveal>
-            <p className="label" style={{ marginBottom: 16 }}>Como trabajamos</p>
+            <p className="label" style={{ marginBottom: 16 }}>Cómo trabajamos</p>
             <h2 className="headline" style={{ fontSize: 'clamp(36px, 5vw, 68px)', marginBottom: 64 }}>
-              Del primer café<br />al ultimo baile
+              Del primer café<br />al último baile
             </h2>
           </Reveal>
           <ProcessGrid />
@@ -70,7 +70,7 @@ export default function ServiciosPage() {
 
       <div className="cta-band">
         <div className="wrap cta-band-inner">
-          <Reveal>
+          <Reveal style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 32 }}>
             <h2 className="headline cta-band-title">
               ¿Quieres saber si encajamos?
             </h2>

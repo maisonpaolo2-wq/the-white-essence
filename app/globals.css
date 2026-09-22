@@ -959,6 +959,7 @@ body {
   .contact-split { grid-template-columns: 1fr; }
   .contact-left, .contact-right { padding: 80px 24px 56px; }
   .contact-left { padding-top: 64px; }
+  .contact-page .contact-left { padding-top: 100px; }
 }
 
 /* ═══════════════════════════════════════

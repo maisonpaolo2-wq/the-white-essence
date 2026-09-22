@@ -22,7 +22,7 @@ Nueva consulta de boda:
 
 Nombre: ${name}
 Email: ${email}
-Telefono: ${phone || 'No indicado'}
+Teléfono: ${phone || 'No indicado'}
 Fecha prevista: ${date || 'No indicada'}
 Invitados: ${guests || 'No indicado'}
 

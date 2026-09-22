@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import Reveal from '@/components/Reveal'
 import ContactForm from '@/components/ContactForm'
 import TestimonialsCarousel from '@/components/TestimonialsCarousel'
@@ -33,9 +34,9 @@ export default function Home() {
           <p className="hero-tagline">
             Bodas con identidad propia<br />Barcelona y alrededores
           </p>
-          <a href="#contacto" className="btn btn-crimson">
+          <Link href="/contacto" className="btn btn-crimson">
             Cuéntame vuestra historia
-          </a>
+          </Link>
         </div>
 
         <a href="#intro" className="hero-scroll" aria-label="Bajar">
@@ -76,7 +77,7 @@ export default function Home() {
                 className="headline"
                 style={{ fontSize: 'clamp(36px, 5vw, 68px)', marginBottom: 32 }}
               >
-                Cada boda nace<br />de una conversacion<br />honesta
+                Cada boda nace<br />de una conversación<br />honesta
               </h2>
               <p className="body-text" style={{ marginBottom: 20 }}>
                 Soy Mar. Organizo bodas en Barcelona y alrededores que reflejan
@@ -84,13 +85,13 @@ export default function Home() {
                 de las bodas.
               </p>
               <p className="body-text" style={{ marginBottom: 36 }}>
-                Desde la búsqueda de la finca hasta el ultimo detalle hecho a mano,
+                Desde la búsqueda de la finca hasta el último detalle hecho a mano,
                 mi trabajo es que cuando llegue el día no tengáis que pensar en
-                nada mas que en disfrutarlo.
+                nada más que en disfrutarlo.
               </p>
-              <a href="#servicios" className="link-arrow">
+              <Link href="/servicios" className="link-arrow">
                 Ver servicios <span aria-hidden="true">&#8594;</span>
-              </a>
+              </Link>
             </Reveal>
 
             <Reveal delay={2}>
@@ -126,9 +127,9 @@ export default function Home() {
         <div className="wrap">
           <Reveal>
             <blockquote className="statement-quote">
-              Organizo bodas que reflejan quienes sois.
+              Organizo bodas que reflejan quiénes sois.
               No las que dicta el mercado,
-              sino las que solo podrian existir para vosotros.
+              sino las que solo podrían existir para vosotros.
             </blockquote>
             <div className="statement-attr">
               <div className="statement-attr-line" />
@@ -149,7 +150,7 @@ export default function Home() {
               className="headline"
               style={{ fontSize: 'clamp(36px, 5vw, 68px)', marginBottom: 64 }}
             >
-              Como puedo ayudarte
+              Cómo puedo ayudarte
             </h2>
           </Reveal>
         </div>
@@ -188,12 +189,12 @@ export default function Home() {
       <section id="proceso" className="section">
         <div className="wrap">
           <Reveal>
-            <p className="label" style={{ marginBottom: 16 }}>Como trabajamos</p>
+            <p className="label" style={{ marginBottom: 16 }}>Cómo trabajamos</p>
             <h2
               className="headline"
               style={{ fontSize: 'clamp(36px, 5vw, 68px)', marginBottom: 64 }}
             >
-              Del primer cafe<br />al ultimo baile
+              Del primer café<br />al último baile
             </h2>
           </Reveal>
 
@@ -257,7 +258,7 @@ export default function Home() {
           <div className="about-body">
             <Reveal>
               <p className="label" style={{ marginBottom: 20, color: 'var(--crimson)' }}>
-                Sobre mi
+                Sobre mí
               </p>
               <h2
                 className="headline"
@@ -268,20 +269,20 @@ export default function Home() {
               <p className="body-text" style={{ marginBottom: 20 }}>
                 Wedding planner y event designer en Barcelona. Empecé a organizar
                 bodas porque me daba cuenta de que muchas celebraciones no reflejaban
-                a las parejas que las protagonizaban. Habia produccion, habia flores,
-                habia comida, pero faltaba alma.
+                a las parejas que las protagonizaban. Había producción, había flores,
+                había comida, pero faltaba alma.
               </p>
               <p className="body-text" style={{ marginBottom: 20 }}>
-                Me especializo en la organizacion integral, la coordinacion y en
+                Me especializo en la organización integral, la coordinación y en
                 crear elementos handmade personalizados que convierten cada boda
-                en algo irrepetible. Cada detalle esta pensado para vosotros.
+                en algo irrepetible. Cada detalle está pensado para vosotros.
               </p>
               <p className="body-text" style={{ marginBottom: 36 }}>
                 Trabajo en Barcelona y alrededores, y viajo donde la boda lo merezca.
               </p>
-              <a href="#contacto" className="btn btn-crimson">
+              <Link href="/contacto" className="btn btn-crimson">
                 Hablemos
-              </a>
+              </Link>
             </Reveal>
           </div>
         </div>

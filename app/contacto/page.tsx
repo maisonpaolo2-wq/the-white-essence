@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ContactoPage() {
   return (
-    <section>
+    <section className="contact-page">
       <div className="contact-split">
         <div className="contact-left">
           <Reveal>
