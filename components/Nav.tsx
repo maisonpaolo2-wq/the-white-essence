@@ -1,17 +1,26 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 import { navLinks, site } from '@/content/data'
 
 export default function Nav() {
-  const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
+  const isHome = pathname === '/'
+  const [scrolled, setScrolled] = useState(!isHome)
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
+    if (!isHome) {
+      setScrolled(true)
+      return
+    }
     const onScroll = () => setScrolled(window.scrollY > 60)
+    onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  }, [isHome])
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
@@ -23,16 +32,16 @@ export default function Nav() {
   return (
     <>
       <header className={`nav${scrolled ? ' scrolled' : ''}`}>
-        <a href="#inicio" className="nav-brand" aria-label={site.fullName}>
+        <Link href="/" className="nav-brand" aria-label={site.fullName}>
           {site.name}
-        </a>
+        </Link>
 
         <div className="nav-right">
           <nav aria-label="Principal">
             <ul className="nav-links">
               {navLinks.map(l => (
                 <li key={l.href}>
-                  <a href={l.href}>{l.label}</a>
+                  <Link href={l.href}>{l.label}</Link>
                 </li>
               ))}
             </ul>
@@ -40,7 +49,7 @@ export default function Nav() {
 
           <span className="nav-lang" aria-hidden="true">EN</span>
 
-          <a href="#contacto" className="nav-cta">Hablemos</a>
+          <Link href="/contacto" className="nav-cta">Hablemos</Link>
 
           <button
             className="nav-burger"
@@ -84,16 +93,20 @@ export default function Nav() {
         <ul className="mobile-menu-links">
           {navLinks.map(l => (
             <li key={l.href}>
-              <a href={l.href} onClick={closeMenu}>{l.label}</a>
+              <Link href={l.href} onClick={closeMenu}>{l.label}</Link>
             </li>
           ))}
         </ul>
 
         <div className="mobile-menu-footer">
-          <a href="#contacto" className="btn btn-ghost-light" onClick={closeMenu}
-            style={{ fontSize: 10, padding: '14px 32px' }}>
+          <Link
+            href="/contacto"
+            className="btn btn-ghost-light"
+            onClick={closeMenu}
+            style={{ fontSize: 10, padding: '14px 32px' }}
+          >
             Hablemos
-          </a>
+          </Link>
         </div>
       </div>
     </>

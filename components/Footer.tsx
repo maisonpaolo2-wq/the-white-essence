@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { navLinks, site } from '@/content/data'
 
 export default function Footer() {
@@ -8,7 +9,7 @@ export default function Footer() {
       <div className="wrap">
         <div className="footer-grid">
           <div>
-            <a href="#inicio" className="footer-brand">{site.name}</a>
+            <Link href="/" className="footer-brand">{site.name}</Link>
             <p className="footer-desc">
               Wedding Planner y Event Designer en Barcelona y alrededores.
               Bodas con identidad propia, desde la primera idea hasta el ultimo detalle.
@@ -20,7 +21,7 @@ export default function Footer() {
             <ul className="footer-nav">
               {navLinks.map(l => (
                 <li key={l.href}>
-                  <a href={l.href}>{l.label}</a>
+                  <Link href={l.href}>{l.label}</Link>
                 </li>
               ))}
             </ul>

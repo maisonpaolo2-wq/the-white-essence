@@ -2,34 +2,8 @@ import Image from 'next/image'
 import Reveal from '@/components/Reveal'
 import ContactForm from '@/components/ContactForm'
 import TestimonialsCarousel from '@/components/TestimonialsCarousel'
-import { site, services, process, portfolio } from '@/content/data'
-
-const processIcons: Record<string, React.ReactNode> = {
-  chat: (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M4 6h20v14H4z" />
-      <path d="M4 20l4 4v-4" />
-    </svg>
-  ),
-  document: (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M6 4h12l4 4v16H6z" />
-      <path d="M18 4v4h4" />
-      <path d="M10 12h8M10 16h6" />
-    </svg>
-  ),
-  calendar: (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="4" y="6" width="20" height="18" rx="1" />
-      <path d="M4 11h20M9 4v4M19 4v4" />
-    </svg>
-  ),
-  heart: (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M14 22S4 16 4 9.5A5.5 5.5 0 0114 6.7 5.5 5.5 0 0124 9.5C24 16 14 22 14 22z" />
-    </svg>
-  ),
-}
+import ProcessGrid from '@/components/ProcessGrid'
+import { site, services, portfolio } from '@/content/data'
 
 export default function Home() {
   return (
@@ -71,6 +45,24 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════
+          MARQUEE BAND
+      ══════════════════════════════════════ */}
+      <div className="marquee-band" aria-hidden="true">
+        <div className="marquee-track">
+          {[0, 1].map(copy => (
+            <span key={copy} style={{ display: 'flex', alignItems: 'center' }}>
+              {['Organización', 'Coordinación', 'Decoración handmade', 'Barcelona y alrededores', 'The White Essence', 'Bodas con identidad propia'].map((item, i) => (
+                <span key={i} style={{ display: 'flex', alignItems: 'center' }}>
+                  <span className="marquee-item">{item}</span>
+                  <span className="marquee-dot">·</span>
+                </span>
+              ))}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* ══════════════════════════════════════
           INTRO
       ══════════════════════════════════════ */}
       <section id="intro" className="section">
@@ -102,17 +94,47 @@ export default function Home() {
             </Reveal>
 
             <Reveal delay={2}>
-              <div style={{ position: 'relative', height: 560 }}>
-                <Image
-                  src="/photos/intro.jpg"
-                  alt="Mar preparando los detalles de una boda en Barcelona"
-                  fill
-                  style={{ objectFit: 'cover', objectPosition: 'center top' }}
-                  sizes="(max-width: 860px) 100vw, 50vw"
-                />
+              <div className="intro-photos">
+                <div className="intro-photo-main">
+                  <Image
+                    src="/photos/intro.jpg"
+                    alt="Mar preparando los detalles de una boda en Barcelona"
+                    fill
+                    style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                    sizes="(max-width: 860px) 100vw, 50vw"
+                  />
+                </div>
+                <div className="intro-photo-accent">
+                  <Image
+                    src="/photos/portfolio-3.jpg"
+                    alt="Detalle floral de boda"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="200px"
+                  />
+                </div>
               </div>
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          STATEMENT
+      ══════════════════════════════════════ */}
+      <section className="statement-section">
+        <div className="wrap">
+          <Reveal>
+            <blockquote className="statement-quote">
+              Organizo bodas que reflejan quienes sois.
+              No las que dicta el mercado,
+              sino las que solo podrian existir para vosotros.
+            </blockquote>
+            <div className="statement-attr">
+              <div className="statement-attr-line" />
+              <span className="statement-attr-text">Mar · The White Essence · Barcelona</span>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -175,20 +197,7 @@ export default function Home() {
             </h2>
           </Reveal>
 
-          <div className="process-grid">
-            {process.map((step, i) => (
-              <Reveal key={step.title} delay={(i % 4) as 0 | 1 | 2 | 3}>
-                <div className="process-cell">
-                  <div className="process-icon">
-                    {processIcons[step.icon]}
-                  </div>
-                  <p className="process-step-num">0{i + 1}</p>
-                  <p className="process-step-title">{step.title}</p>
-                  <p className="process-step-desc">{step.description}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+          <ProcessGrid />
         </div>
       </section>
 
